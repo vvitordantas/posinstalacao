@@ -62,6 +62,7 @@ sudo apt-get -y install alien
 sudo apt-get -y install htop
 sudo apt-get -y install curl
 sudo apt-get -y install mtr
+sudo apt-get -y install traceroute
 #
 #DOCKER
 #
