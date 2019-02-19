@@ -23,7 +23,7 @@ clear
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo %_____INSTALL ESSENCIAL APPS_______%
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-$instalar net-tools snapd snapd-xdg-open ubuntu-make
+$instalar net-tools snapd snapd-xdg-open ubuntu-make remminna*
 $instalar software-properties-common apt-transport-https wget
 $instalar wget ca-certificates
 $instalar flatpak
