@@ -1,52 +1,77 @@
-#! /bin/bash
+#!/bin/bash
 clear
-addrepo=sudo add-apt-repository
-instalar=sudo apt-get -y install
-snap=sudo snap install
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+echo "% ########   #######   ######                                                                            %"
+echo "% ##     ## ##     ## ##    ##                                                                           %"
+echo "% ##     ## ##     ## ##                                                                                 %"
+echo "% ########  ##     ##  ######                                                                            %"
+echo "% ##        ##     ##       ##                                                                           %"
+echo "% ##        ##     ## ##    ##                                                                           %"
+echo "% ##         #######   ######                                                                            %"
+echo "%                                                                                                        %"
+echo "% #### ##    ##  ######  ########    ###    ##          ###     ######     ###     #######               %"
+echo "%  ##  ###   ## ##    ##    ##      ## ##   ##         ## ##   ##    ##   ## ##   ##     ##              %"
+echo "%  ##  ####  ## ##          ##     ##   ##  ##        ##   ##  ##        ##   ##  ##     ##              %"
+echo "%  ##  ## ## ##  ######     ##    ##     ## ##       ##     ## ##       ##     ## ##     ##              %"
+echo "%  ##  ##  ####       ##    ##    ######### ##       ######### ##       ######### ##     ##              %"
+echo "%  ##  ##   ### ##    ##    ##    ##     ## ##       ##     ## ##    ## ##     ## ##     ##              %"
+echo "% #### ##    ##  ######     ##    ##     ## ######## ##     ##  ######  ##     ##  #######               %"
+echo "%                                                                                                        %"
+echo "%                                                                                                        %"
+echo "%     Instalação dos aplicativos mais usados, padronizando o pós instalação das maquinas.                %"
+echo "%     Atualiza o sistema, instala pacotes básicos e ferramentas de desenvolvimento.                      %"
+echo "%                                                                                                        %"
+echo "%                                                                                                        %"
+echo "%     Pressione qualquer tecla para continuar...                                                         %"
+echo "%                                                                                                        %"
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+read X
+clear
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo %___UPDATING REPOSITORY and PPAs___%
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-$addrepo ppa:serge-rider/dbeaver-ce -y
-$addrepo ppa:webupd8team/atom -y
-$addrepo ppa:ubuntu-desktop/ubuntu-make -y
-$addrepo ppa:alexlarsson/flatpak -y
-$addrepo ppa:nilarimogard/webupd8 -y
-$addrepo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" -y
-$addrepo "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
-sudo apt-get -y update && upgrade
+sudo add-apt-repository ppa:serge-rider/dbeaver-ce -y
+sudo add-apt-repository ppa:webupd8team/atom -y
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make -y
+sudo add-apt-repository ppa:alexlarsson/flatpak -y
+sudo add-apt-repository ppa:nilarimogard/webupd8 -y
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" -y
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
+sudo apt-get -y update 
+sudo apt-get -y upgrade
 clear
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo %__________UPDATE FINISH___________%
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-pause 2
+sleep 2
 clear
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo %_____INSTALL ESSENCIAL APPS_______%
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-$instalar net-tools snapd snapd-xdg-open ubuntu-make remminna*
-$instalar software-properties-common apt-transport-https wget
-$instalar wget ca-certificates
-$instalar flatpak
+sudo apt-get -y install net-tools snapd snapd-xdg-open ubuntu-make remminna*
+sudo apt-get -y install software-properties-common apt-transport-https wget
+sudo apt-get -y install wget ca-certificates
+sudo apt-get -y install flatpak
 clear
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo %__FINISH INSTALL ESSENCIAL APPS___%
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-pause 2
+sleep 2
 clear
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo %______INSTALLING DEV TOOLS________%
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-$snap datagrip --classic
-$snap pycharm-community --classic
-$snap intellij-idea-community --classic --edge
-$instalar sublime-text zsh git git-core mysql-workbench code
-$instalar goland-go dbeaver-ce atom awscli filezilla maven python3
-$instalar redis openvpn freeradius-utils alien htop curl mtr traceroute
+sudo snap install datagrip --classic
+sudo snap install pycharm-community --classic
+sudo snap install intellij-idea-community --classic --edge
+sudo apt-get -y install sublime-text zsh git git-core mysql-workbench code
+sudo apt-get -y install goland-go dbeaver-ce atom awscli filezilla maven python3
+sudo apt-get -y install redis openvpn freeradius-utils alien htop curl mtr traceroute
 #
 #DOCKER
 #
 sudo apt-get remove docker docker-engine docker.io
-$instalar apt-transport-https ca-certificates curl software-properties-common
+sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get -y install docker-ce
@@ -70,4 +95,32 @@ clear
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo %_____FINISH INSTALL DEV TOOLS_____%
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-pause 3
+sleep 3
+clear
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+echo "% ########   #######   ######                                                                            %"
+echo "% ##     ## ##     ## ##    ##                                                                           %"
+echo "% ##     ## ##     ## ##                                                                                 %"
+echo "% ########  ##     ##  ######                                                                            %"
+echo "% ##        ##     ##       ##                                                                           %"
+echo "% ##        ##     ## ##    ##                                                                           %"
+echo "% ##         #######   ######                                                                            %"
+echo "%                                                                                                        %"
+echo "% #### ##    ##  ######  ########    ###    ##          ###     ######     ###     #######               %"
+echo "%  ##  ###   ## ##    ##    ##      ## ##   ##         ## ##   ##    ##   ## ##   ##     ##              %"
+echo "%  ##  ####  ## ##          ##     ##   ##  ##        ##   ##  ##        ##   ##  ##     ##              %"
+echo "%  ##  ## ## ##  ######     ##    ##     ## ##       ##     ## ##       ##     ## ##     ##              %"
+echo "%  ##  ##  ####       ##    ##    ######### ##       ######### ##       ######### ##     ##              %"
+echo "%  ##  ##   ### ##    ##    ##    ##     ## ##       ##     ## ##    ## ##     ## ##     ##              %"
+echo "% #### ##    ##  ######     ##    ##     ## ######## ##     ##  ######  ##     ##  #######               %"
+echo "%                                                                                                        %"
+echo "%                                                                                                        %"
+echo "%     Instalação concluida, o computador está pronto.                                                    %"
+echo "%                                                                                                        %"
+echo "%                                                                                                        %"
+echo "%                                                                                                        %"
+echo "%     Pressione qualquer tecla para sair...                                                              %"
+echo "%                                                                                                        %"
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+read X
+clear
