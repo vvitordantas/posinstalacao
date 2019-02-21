@@ -84,6 +84,7 @@ wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 sudo dpkg -i gitkraken-amd64.deb
 sudo apt-get -y -f install
 sudo dpkg -i gitkraken-amd64.deb
+rm -rf gitkraken-amd64.deb
 #
 #TEAMVIEWER
 #
@@ -91,6 +92,7 @@ wget http://download.teamviewer.com/download/teamviewer_i386.deb -O teamviewer.d
 sudo dpkg -i teamviewer.deb
 sudo apt-get -y -f install
 sudo dpkg -i teamviewer.deb
+rm -rf teamviewer.deb
 clear
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 echo "%     FINISH INSTALL DEV TOOLS     %"
