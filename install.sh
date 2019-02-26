@@ -37,7 +37,7 @@ sudo add-apt-repository ppa:alexlarsson/flatpak -y
 sudo add-apt-repository ppa:nilarimogard/webupd8 -y
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" -y
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
-sudo apt-get -y update 
+sudo apt-get -y update
 sudo apt-get -y upgrade
 clear
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
@@ -48,9 +48,13 @@ clear
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 echo "%     INSTALL ESSENCIAL APPS       %"
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-sudo apt-get -y install net-tools snapd snapd-xdg-open ubuntu-make remminna*
+sudo apt-get -y install net-tools
+sudo apt-get -y install snapd
+sudo apt-get -y install snapd-xdg-open
+sudo apt-get -y install ubuntu-make
 sudo apt-get -y install software-properties-common apt-transport-https wget
 sudo apt-get -y install wget ca-certificates
+sudo apt-get -y reminna*
 sudo apt-get -y install flatpak
 clear
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
@@ -61,12 +65,32 @@ clear
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 echo "%       INSTALLING DEV TOOLS       %"
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+#
 sudo snap install datagrip --classic
 sudo snap install pycharm-community --classic
 sudo snap install intellij-idea-community --classic --edge
-sudo apt-get -y install sublime-text zsh git git-core mysql-workbench code
-sudo apt-get -y install goland-go dbeaver-ce atom awscli filezilla maven python3
-sudo apt-get -y install redis openvpn freeradius-utils alien htop curl mtr traceroute
+#
+sudo apt-get -y install sublime-text
+sudo apt-get -y install zsh
+sudo apt-get -y install git
+sudo apt-get -y install git-core
+sudo apt-get -y install mysql-workbench
+sudo apt-get -y install code
+sudo apt-get -y install goland-go
+sudo apt-get -y install dbeaver-ce
+sudo apt-get -y install atom
+sudo apt-get -y install awscli
+sudo apt-get -y install filezilla
+sudo apt-get -y install maven
+sudo apt-get -y install python3
+sudo apt-get -y install redis
+sudo apt-get -y install openvpn
+sudo apt-get -y install freeradius-utils
+sudo apt-get -y install alien
+sudo apt-get -y install htop
+sudo apt-get -y install curl 
+sudo apt-get -y mtr 
+sudo apt-get -y traceroute
 #
 #DOCKER
 #
